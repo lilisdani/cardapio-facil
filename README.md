@@ -36,3 +36,11 @@ O **Cardápio Fácil** é um sistema web criado para **agilizar o atendimento em
 1. Clone o repositório:
 ```bash
 git clone https://github.com/lilisdani/cardapio-facil.git
+---
+
+## 📸 Captura de Tela
+
+### 🧾 Tela do Cardápio com pedidos por mesa
+
+<img src="https://raw.githubusercontent.com/lilisdani/cardapio-facil/main/capturas/cardapio_f.jpg" alt="Tela de pedido no cardápio-fácil" width="400"/>
+
