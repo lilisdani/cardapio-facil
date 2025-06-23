@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="assets/css/style copy.css">
+    <link rel="shortcut icon" href="assets/img/logo-icone.png">
+    <title>Sistema Cardápio Fácil</title>
+    <script src='main.js'></script>
+</head>
+
+<!----------------Iokim 21/02/2024: Reestruturar o estilo CSS da index. Flexbox? Grid?-->
+
+<body>
+    <header id="header">
+        <a href="#">
+            <img id="logo-vertical" src="assets/img/Logo-horizontal-Cardapio-Facil.png" alt="Logo Cardápio Fácil">
+        </a>
+    </header>
+    <div class="container">
+        <aside id="aside-signin">
+            <img id="identidade-cardapio" src="assets/img/capa-login.png" alt="Capa da Página de Login">
+        </aside>
+        <main id="main-signin">
+            <form method="post" id="loginData" action="" autocomplete="off" novalidate>
+                <div class="card" id="login-cpf">
+                    <div class="header-login-main-topo">
+                        <img src="assets/img/icone-grande-login.png">
+                        <h4 align="center">LOGIN</h4>
+                        <p>
+                            Digite seu CPF para
+                            <strong>criar</strong>
+                             ou 
+                            <strong>acessar</strong>
+                             sua conta
+                        </p>
+                    </div>
+                    <div class="accordion-panel" id="accordion-panel-id">
+                        <label for="cpf">CPF</label>
+                        <input id="accountId" name="accountId" autocomplete="new-password" tabindex="1" type="tel" placeholder="Digite seu CPF" aria-invalid="false">
+                        <div class="button-panel" id="login-button-panel">
+                            <button id="enter-account-id" type="submit" name="operation" value="enter-account-id" class="button-continuar" tabindex="2">Continuar</button>
+                        </div>
+            </form>
+        </main>
+    </div>
+    <footer id="footer">
+        <p>&copy; Todos os direitos reservados Cardápio Fácil - 2024.</p>
+    </footer>
+</body>
+</html>

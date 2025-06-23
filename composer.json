@@ -1,0 +1,8 @@
+{
+    "name": "cardapiofacil/projeto-senac",
+    "description": "sistema de cardapio interativo, que tem o objetivo de automatrizar o processo de fazeer um pedido em restaurantes, lanchontes, bares etc..",
+    "require": {
+        "php-amqplib/php-amqplib": "^2.11"
+    }
+}
+

@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* Zerando as margens e estilos padrões */
+body, ul, li, p {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  font-family: Arial;
+}
+
+body {
+    background-color: #f1f1f1;/*Cor de fundo da página*/
+  }
+  
+  a {
+    text-decoration: none;
+    color: #1d1e20;
+  }
+  
+  p {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  img{
+    max-width: 100%;
+    display: block;
+  }
+  
+  footer{
+    margin: 1em auto 0 auto;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    background-color: #b60e0e;
+    color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  footer p {
+    font-size: 12px;
+  }
+
+  .header {
+    background: white;
+    display: flex; /* Coloca os objetos um ao lado do outro*/
+    flex-wrap: wrap; /* Define que o segundo objeto fique abaixo do primeiro, quando a resolução da tela diminuir */
+    justify-content: space-between; /*Alinha os itens do cabeçalho */
+    align-items: center; /* Alinha os itens proporcionalmente */
+    padding: 20px;
+    box-shadow: 0 3px 6px #00000029;
+  }
+  
+  header img {
+    /*width: 200px;*/
+    max-width: 200px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu li {
+    margin-left: 10px;
+  }
+  
+  .menu li a {
+    display: block;
+    padding: 10px;
+  }
+
+  /* CSS Grid */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*flex-direction: column;*/
+    /*grid-template-columns: 1fr;*/
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /*grid-gap: 30px;*/
+  }
+
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*width: 20%;*/
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card {
+    display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: block;         /* NEW, Spec - Firefox, Chrome, Opera */
+    /*flex-direction: column;*/
+    align-items: center;
+    background: #ffffff 0 0 no-repeat padding-box;
+    box-shadow: 0 2px 4px #00000033;
+    padding: 20px;
+    max-width: 384px;
+    min-height: 393px;
+    border-radius: 6px;
+  }
+  
+  .card h4 {
+    text-align: center;
+    margin-top: 50px;
+    color: #1d1e20;
+  }
+  
+  .card img {
+    /*position: absolute;*/
+    margin: 10% 10% 10px 45%;
+  }
+  
+  .card p {
+    color: #1d1e20;
+  }
+  
+  .header-card {
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-card p {
+    font-size: 12px;
+    margin: 0 0 10px 0;
+  }
+  
+  ::placeholder {
+    opacity: 1; /* Firefox */
+    font-style: italic;
+    font-size: 90%;
+  }
+  
+  label {
+    margin: 15px 0px 10px 0;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  input {
+    width: 93%;
+    height: 45px;
+    padding: 0 0 0 25px;
+    margin: 10px 0 15px 0;
+    background: #FFFFFF 0 0 no-repeat padding-box;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #c2c2c2;
+  }
+  
+  button {
+    border: none;
+    box-shadow: 0 2px 3px #00000029;
+    font-size: 1em;
+    font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+  
+  .button-continuar {
+    width: 100%;
+    height: 45px;
+    background: #627526 0 0 no-repeat padding-box;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+
+
+
+  .cadastro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .cadastro p {
+    margin-top 30px;
+  }
+  
+  .link-cadastro {
+    margin-left: 3px;
+    padding: 3px;
+  }

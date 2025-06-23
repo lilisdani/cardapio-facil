@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href="assets/css/style-login2.css">
+    <link rel="shortcut icon" href="assets/img/logo-icone.png">
+    <title>Sistema Cardápio Fácil</title>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header class="header"> <!--Início da Barra do Topo da Página-->
+        <a href="index.html">
+            <img id="logo-horizontal" src="assets/img/Logo-Horizontal-Cardapio-Facil.png" alt="Logo Cardápio Fácil">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="suporte.html">Suporte</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header> <!--Fim da Barra do Topo da Página-->
+    <main>
+        <div class="grid">
+            <div class="form-login">
+                <form method="post" action="">
+                    <div class="card">
+                        <div class="header-card">
+                            <img src="assets/img/icone-grande-login.png">
+                            <h4>LOGIN</h4>
+                            <p>
+                                Digite seu CPF para
+                                <strong>criar</strong>
+                                 ou 
+                                <strong>acessar</strong>
+                                 sua conta para continuar.
+                            </p>
+                            <div class="painel-cpf">
+                                <label for="cpf">CPF</label>
+                                <input type="text" placeholder="Digite seu CPF" id="cpf" name="cpf" tabindex="1">
+                                <label for="password">Senha</label>
+                                <input type="password" placeholder="Digite a senha" id="password" name="password" tabindex="2">
+                                <div class="button-continuar">
+                                    <button id="enter-cpf" type="submit" class="button-continuar" tabindex="3">Continuar</button>
+                                </div>
+                                <div class="cadastro">
+                                    <p>Primeiro acesso? </p>
+                                    <a href="cadastro.html"><p class="link-cadastro"><strong>Cadastre-se Aqui!</strong></p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer><p>&copy; Todos os direitos reservados Cardápio Fácil - 2024.</p></footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+/* Estilização geral e reset das configurtações padrões do html */
+body {
+  background: #f1f1f1;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Estilizando a Seção Cabeçalho */
+#cabecalho{
+  position: relative;
+  display:flex
+}
+/* .barra-mesa {
+  position: relative;
+  display: flex;
+} */
+.barra-cinza {
+  background: #1d1e20;
+  width: 100%;
+  height: 50px;
+}
+.barra-vermelha {
+  background: #b60e0e;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  top: 50px;
+  /* bottom: 0; */
+  left: 0;
+}
+.mesa {
+  background: #b60e0e;
+  width: 28%;
+  /* max-width: 100px; */
+  height: 35px;
+  text-align: center;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin-top: -40px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: 400;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.img-cabecalho {
+  width: 100%;
+  position: absolute;
+  top: 60px;
+  /* z-index: -1; */
+}
+/* Fim da Estilização do Cabeçalho */
+
+/* Início do Bloco de Identificação do Restaurante */
+.identifica-cliente {
+  display: flex;
+  background: #0a3183;
+  /* justify-content: space-around; */
+  align-items: center;
+  padding-left: 25px;
+  /* bottom: 0px; */
+} 
+.logo-cliente {
+  background: white;
+  border-radius: 8px;
+  padding: 4px;
+  width: 15%;
+  /* height: 15%; */
+  box-shadow: 0 3px 6px #00000029;
+  position: relative;
+  z-index: 1;
+  /* bottom: 0px; */
+  left: 25px;
+  top: 80px;
+  /* margin-left: 25px; */
+  /* margin-top: -40px; */
+  /* margin-top: 96px; */
+  margin-right: 20px;
+}
+.nome-cliente {
+  color: #1d1e20;
+  font-size: 18px;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 0px; */
+  left: 115px;
+  /* top: 160px; */
+  top: 25%;
+}
+/* Fim do Bloco de Identificação do Restaurante */

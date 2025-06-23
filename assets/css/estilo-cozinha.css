@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+}
+.main {
+<<<<<<<< Updated upstream:assets/css/estilo-cozinha.css
+    width: 150%;
+========
+    width: 120%x;
+>>>>>>>> Stashed changes:cozinha/style_cozinha.css
+    margin-top: 10px;
+
+border-radius: 5px;
+margin-bottom: 20px;
+padding: 1%;
+margin-bottom: 1%;
+padding-top: 2px;
+padding:10,10%;
+padding-right: 1%;
+display: block; /* Adicionando display flex para alinhar os itens horizontalmente */
+justify-content:space-between;
+
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+}
+
+li {
+    display: inline; /* Exibe os itens da lista na horizontal */
+    margin-right: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilo para os links do menu */
+li a {
+    margin-top: auto;
+    text-decoration: none; /* Remove a decoração de texto padrão dos links */
+    padding:0cqmax; /* Espaçamento interno dos links */
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #ac0606; /* Cor de fundo dos links */
+    color: #ffffff; /* Cor do texto dos links */
+    border-radius: 5px; /* Borda arredondada nos links */
+}
+
+/* Estilo para os links quando passar o mouse sobre eles */
+li a:hover {
+    background-color: #ddd; /* Altera a cor de fundo ao passar o mouse sobre os links */
+}
+
+.navegar {
+  margin-bottom: 5%;
+display: flex; /* Adicionando display flex para alinhar os itens horizontalmente */
+flex-direction: column; /* Alterado para dispor os itens verticalmente */
+padding: 0;
+
+
+}
+
+.paginas {
+   
+   padding:0dvw;
+  border: 1px solid #f7f7f7;
+    padding-left:  15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    text-align: center;
+
+}
+/* Estilo para os blocos de tabela */
+.bloco_um,
+.bloco_dois,
+.bloco_tres,
+.bloco_quatro,
+.bloco_cinco {
+margin-bottom: 20px; /* Espaçamento entre os blocos */
+
+}
+
+/* Estilo para os elementos de bloco na vertical */
+.bloco_um,
+.bloco_dois,
+.bloco_tres,
+.bloco_quatro,
+.bloco_cinco {
+display: block;
+width: 100%; /* Para garantir que ocupem toda a largura disponível */
+}
+
+
+
+
+
+
+.resumo_pedido {
+margin-bottom: 1%;
+padding-left: 5%;
+
+}
+
+.bloco_um {
+margin-bottom: 1%;
+display: flex; /* Adicionando display flex para alinhar os itens horizontalmente */
+flex-direction: column; /* Alterado para dispor os itens verticalmente */
+padding-left: 1%;
+}
+
+.bloco_dois {
+margin-bottom: 1%;
+display: flex; /* Adicionando display flex para alinhar os itens horizontalmente */
+flex-direction: column; /* Alterado para dispor os itens verticalmente */
+padding-left: 1%;
+}
+
+.bloco_tres {
+ margin-bottom: 1%;
+display: flex; /* Adicionando display flex para alinhar os itens horizontalmente */
+flex-direction: column; /* Alterado para dispor os itens verticalmente */
+padding-left: 1%;
+
+
+}
+
+.bloco_quatro {
+margin-bottom: 1%;
+display: flex; /* Adicionando display flex para alinhar os itens horizontalmente */
+flex-direction: column; /* Alterado para dispor os itens verticalmente */
+padding-left: 1%;
+
+}
+
+.bloco_cinco {
+width: 100%;
+margin-bottom: 1%;
+display: flex; /* Adicionando display flex para alinhar os itens horizontalmente */
+flex-direction: column; /* Alterado para dispor os itens verticalmente */
+padding-left: 1%;
+margin-right: 1%;
+}
+
+.titulo {
+margin-bottom: 1%; /* Adicionando margem inferior para separar o título da descrição */
+
+
+}
+
+.descricao {
+
+margin-left: 5%; /* Adicionando margem esquerda para alinhar a descrição */
+margin-top: 5%;
+
+}
+
+.botao_finalizar {
+background-color: #bc1108;
+color: white;
+padding: 2% 3%;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 0px; /* Adicionando margem ao botão para separá-lo dos outros elementos */
+margin-right: 10px;
+float: right;
+}   
+.botao_iniciar {
+background-color: #068611;
+color: white;
+padding: 2% 3%;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 0px; /* Adicionando margem ao botão para separá-lo dos outros elementos */
+margin-right: 10px;
+float: right;
+}   
+
+.botao:hover {
+background-color: #45a049;
+}
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    background-color: #faf7f7bb;
+    width: 100%;
+    
+}
+th, td {
+    
+    border: 1px solid #fefefe;
+    padding-left:  20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    text-align: center;
+    
+}
+th {
+    background-color: #f4f2f2;
+    width: 10%;
+}

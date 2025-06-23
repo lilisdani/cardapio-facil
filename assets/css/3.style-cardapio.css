@@ -1,0 +1,77 @@
+/* Estilizações da página cardápio */
+body,
+main {
+  height: 100%;
+}
+.background-vermelho-dark {
+  background-color: #b60e0e;
+}
+
+/* 1. Estilizações do Banner */
+.banner {
+  position: relative;
+}
+.titulo-mesa {
+  position: absolute;
+  bottom: 0;
+  margin-left: 12px;
+  background-color: #b60e0e;
+  padding: 10px 35px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.titulo-mesa h5 {
+  color: white;
+}
+.barra-banner-vermelha {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  background-color: #b60e0e;
+  z-index: 1;
+}
+
+/* Estilizações da Seção de Itens do Cardápio */
+.itens-cardapio {
+  background-color: rgb(245, 245, 245);
+  height: 100%;
+}
+.seletor-quantidade {
+  width: 40%;
+}
+.foto-produto {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.card-produto {
+  width: 17rem;
+  height: 30rem;
+}
+
+.bg-itens-do-carrinho {
+  background-color: rgb(221, 204, 204);
+}
+
+/* Estilizações do Rodapé */
+.rodape-total {
+  width: 100%;
+}
+
+/* Estilizações para telas pequenas */
+@media (max-width: 992px) {
+  .titulo-mesa {
+    padding: 8px 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .titulo-mesa h5 {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,28 @@
+/* .bg-secao-inicio {
+  background: url(../img/barra-inicio-vermelha.svg) no-repeat;
+  background-size: cover;
+  background-position: 15% 98%;
+} */
+.bg-secao-footer {
+  background: url(/assets/img/imagem_rodape_login.png) no-repeat;
+  background-size: cover;
+}
+/* main {
+  margin-top: 5%;
+} 
+@media (min-width: 999px) {
+  .menu-sanduiche {
+    visibility: hidden;
+  }
+  .menu-normal {
+    visibility: visible;
+  }
+}
+@media (max-width: 999px) {
+  .menu-normal {
+    visibility: hidden;
+  }
+  .menu-sanduiche {
+    visibility: visible;
+  }
+} */

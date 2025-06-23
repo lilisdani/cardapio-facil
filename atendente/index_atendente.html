@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu do Restaurante</title>
+    <!-- Adicione o seu CSS aqui -->
+</head>
+<body>
+    <header>
+        <!-- O seu código HTML existente para a barra de navegação -->
+    </header>
+
+    <div class="container mt-5">
+        <h1>Menu do Restaurante</h1>
+
+        <!-- Exemplo de um item do menu -->
+        <!-- Adicione um ID único para cada item para facilitar a identificação -->
+        <div id="item1" class="card">
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <h5 class="fw-bolder">Misto</h5>
+                    Pão de forma, queijo mussarela & presunto fatiados:
+                    <div class="d-flex justify-content-center pt-4">
+                        <span class="text-muted text-decoration-line-through">R$7.00</span>
+                        R$5.00
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selecionar quantidade -->
+            <label class="form-label" for="typeNumber">Qtde:</label>
+            <div class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent">
+                <div class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center">
+                    <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', -1)">
+                        <i class="fas fa-minus"></i>
+                    </button>
+
+                    <input id="form1" min="0" name="quantity" value="0" type="number" class="form-control form-control-sm" onchange="atualizarCarrinho()"/>
+
+
+                    <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', 1)">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Fim do exemplo de item do menu -->
+
+        <!-- Div para exibir o valor total -->
+        <div id="valor-total" class="text-end mt-3">
+            <strong>Valor total:</strong> R$<span id="valor-total-numero">0.00</span>
+        </div>
+
+        <!-- Exibição temporária dos itens no carrinho -->
+        <div id="itens-carrinho" class="mt-3">
+            <h2>Itens no Carrinho</h2>
+            <!-- Aqui serão adicionadas as linhas para cada item no carrinho -->
+            <input id="form1" min="0" name="quantity" value="0" type="number" class="form-control form-control-sm" onchange="atualizarCarrinho()"/>
+
+        </div>
+
+        <!-- Botão para enviar o pedido -->
+        <button onclick="enviarPedido()" class="btn btn-primary mt-3">Enviar Pedido</button>
+    </div>
+
+    <script>
+        // Função para alterar a quantidade de um item
+        function alterarQuantidade(btn, inputId, incremento) {
+            var input = document.getElementById(inputId);
+            var novaQuantidade = parseInt(input.value) + incremento;
+            if (novaQuantidade >= 0) {
+                input.value = novaQuantidade;
+                atualizarCarrinho();
+            }
+        }
+
+        // Função para atualizar o carrinho
+        function atualizarCarrinho() {
+            var total = 0;
+            var inputsQuantidade = document.querySelectorAll('input[name="quantity"]');
+            var itensCarrinho = document.getElementById('itens-carrinho');
+
+            itensCarrinho.innerHTML = '';
+
+            inputsQuantidade.forEach(function(input) {
+                var precoUnitario = parseFloat(input.parentNode.parentNode.querySelector('.text-center > div > span').innerText.replace('R$', ''));
+                var quantidade = parseInt(input.value);
+                var subtotal = precoUnitario * quantidade;
+                total += subtotal;
+
+                var linhaItem = document.createElement('div');
+                linhaItem.innerHTML = `<p>Nome do Item: Misto</p>
+                                       <p>Preço Unitário: R$${precoUnitario.toFixed(2)}</p>
+                                       <p>Quantidade: ${quantidade}</p>
+                                       <p>Subtotal: R$${subtotal.toFixed(2)}</p>`;
+                itensCarrinho.appendChild(linhaItem);
+            });
+
+            document.getElementById('valor-total-numero').innerText = total.toFixed(2);
+        }
+
+        // Função para enviar o pedido
+        function enviarPedido() {
+            // Implemente a lógica para enviar o pedido
+        }
+    </script>
+
+
+
+#carrinho {
+    position:relative;
+    bottom: 10px; /* Ajuste conforme necessário */
+    left: 80%; /* Ajuste conforme necessário */
+    margin-top: 1%;
+}
+
+#carrinho img {
+    width: 10%; /* Tamanho da imagem do carrinho */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: 2%;
+    padding-top:0%;
+    /* carrinho para enviar pedido */
+}
+
+#quantidade-itens-carrinho {
+    background-color: red; /* Cor de fundo do número */
+    color: white; /* Cor do texto */
+    border-radius: 50%; /* Formato redondo */
+    width: 20px; /* Largura */
+    height: 20px; /* Altura */
+    font-size: 12px; /* Tamanho da fonte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15px; /* Margem negativa para sobrepor o número à imagem */
+}
+
+
+<!-- início SANDUÍCHE x-caboquinho -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do produto-->
+        <img class="card-img-top" src="../assets/img/xcaboquinho.png" alt="...">
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do produto-->
+                <h5 class="fw-bolder">X-Caboquinho</h5>
+                <!-- Preço do Produto-->
+                Pão, tucumã, queijo coalho e banana frita:
+            </div>
+        </div>
+        <!-- Selecionar quantidade-->
+        <label class="form-label" for="typeNumber">Qtde:</label>
+        <div class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent">
+            <div class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center">
+                <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', -1); atualizarCarrinho()">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+                <input id="form1" min="0" name="quantity" value="0" type="number" class="form-control form-control-sm" onchange="atualizarCarrinho()"/>
+
+                <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', 1); atualizarCarrinho()">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Selecionar quantidade-->
+  <label class="form-label" for="typeNumber">Qtde:</label>
+  <div
+    class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent"
+  >
+    <div
+      class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center"
+    >
+      <button
+        class="btn btn-link px-2"
+        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+      >
+        <i class="fas fa-minus"> < </i>
+      </button>
+
+      <input
+        id="form1"
+        min="0"
+        name="quantity"
+        value="0"
+        type="number"
+        class="form-control form-control-sm"
+      />
+
+      <button
+        class="btn btn-link px-2"
+        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+      >
+        <i class="fas fa-plus"> > </i>
+      </button>
+
+       <!-- início SANDUÍCHE x-caboquinho -->
+       < class="col mb-5">
+       < class="card h-100">
+         <!-- Imagem do produto-->
+         <img
+           class="card-img-top"
+           src="../assets/img/xcaboquinho.png"
+           alt="..."
+         />
+         <!-- Detalhes do produto-->
+        
+         <!-- Selecionar quantidade-->
+      <label class="form-label" for="typeNumber">Qtde:</label>
+</body>
+</html>
+

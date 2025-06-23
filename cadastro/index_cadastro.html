@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/cadastro.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo-icone.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      .bg-secao-inicio {
+        background: url(../img/barra-inicio-vermelha.svg) no-repeat;
+        background-size: cover;
+        background-position: 15% 98%;
+      }
+    </style>
+
+    <title>Cadastre-se - Cardápio Fácil</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Início da Barra de Navegação para telas grandes -->
+      <div
+        class="container-fluid d-flex align-items-center shadow-lg-sm sticky-top bg-white pt-4 pb-4"
+      >
+        <div class="container">
+          <div class="row">
+            <!-- Logomarca Cardápio Fácil -->
+            <div class="col-lg-3 col-12 text-lg-start text-center">
+              <a href="../index.html">
+                <img
+                  class="img-fluid"
+                  src="../assets/img/Logo-Horizontal-Cardapio-Facil.png"
+                  alt="Logo Cardápio Fácil Horizontal"
+                  width="200rem"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fim da Barra de Navegação para telas grandes -->
+    </header>
+
+    <!-- Início da Seção Principal -->
+    <main class="container-fluid d-flex pt-4 pb-2">
+      
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div
+            class="shadow-lg p-4 mb-2 bg-white rounded form-row pt-0 pb-3 col-lg-5 col-12"
+          >
+            <div>
+              <p class="lh-1 display-6 .color-text-cinza mb-0">Cadastre-se</p>
+              <p class="lh-1 display-5 fw-bold text-danger">para acessar</p>
+            </div>
+            <form action="processar_cadastro.php" method="POST">
+              <div class="form-row pt-0 pb-3 col-12">
+                <div class="form-group col-md-12 pt-0 pb-1">
+                  <label for="inputName" class="pb-1">Nome Completo:</label>
+                  <input
+                    type="text"
+                    id="inputName"
+                    class="form-control"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-12 pb-1">
+                  <label for="inputEmail" class="pb-1">Email:</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-12 pb-1">
+                  <label for="inputCPF" class="pb-1">CPF:</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputCPF"
+                    name="cpf"
+                    placeholder="Digite seu CPF"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="inputCargo" class="pb-1">Cargo:</label>
+                  <select
+                    class="form-select"
+                    id="inputCargo"
+                    name="cargo"
+                    aria-label="Selecione seu cargo"
+                    required
+                  >
+                    <option value="">Selecione seu cargo</option>
+                    <option value="1">Atendente</option>
+                    <option value="2">Caixa</option>
+                    <option value="3">Administrador</option>
+                    <option value="4">Administrador de Sistema</option>
+                    <option value="5">Cozinha</option>
+                  </select>
+                </div>
+                <div class="form-group col-md-12 pb-1">
+                  <label for="inputSenha" class="pb-1">Senha:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputSenha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-12 pb-0">
+                  <label for="inputSenha2" class="pb-1">Repita Senha:</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="inputSenha2"
+                    name="senha2"
+                    placeholder="Repita sua senha"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="d-grid gap-2 col-md-12 text-center pt-2">
+                <button type="submit" class="btn btn-danger">Cadastrar</button>
+              </div>
+            </form>
+            <!-- Texto Direcionamento Login -->
+            <div class="row pt-2">
+              <div class="col-12">
+                <small
+                  >Você já tem uma conta?
+                  <a href="../login/index_login.php" class="text-dark fw-bold"
+                    >Acesse aqui!</a
+                  ></small
+                >
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    </main>
+    <!-- Imagem Rodapé -->
+    <footer class="pt-3">
+      <section class="container-fluid bg-secao-footer text-white pt-0 pb-0">
+        <div class="container d-flex align-items-center pt-0 pb-5">
+          <div class="row pt-5 pb-5">
+            <div class="col-12 pt-5 pb-5"></div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- ADICIONANDO JAVASCRIPT DO BOOTSTRAP -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

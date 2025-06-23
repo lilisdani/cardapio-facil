@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        @media (min-width: 999px) {
+            .menu-sanduiche {
+                visibility: hidden;
+                
+            }
+            .menu-normal {
+                visibility: visible;
+            }
+        }
+        @media (max-width: 999px) {
+            .menu-normal {
+                visibility: hidden;
+            }
+            .menu-sanduiche {
+                visibility: visible;
+            }
+        }
+    </style>
+    <title>Barra de Navegação</title>
+</head>
+<body>
+    <header>
+        <!-- Início da Barra de navegação para telas pequenas -->
+        <nav class="navbar menu-sanduiche bg-body-white shadow-sm sticky-top d-lg-none">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="assets/img/Logo-Horizontal-Cardapio-Facil.png" alt="" width="200rem"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <a href="index.html" class="offcanvas-title" id="offcanvasNavbarLabel"><img src="assets/img/Logo-Horizontal-Cardapio-Facil.png" alt="" width="200rem"></a>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav navbar-expand-lg justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#funciona">Como funciona?</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#clientes">Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#beneficios">Por que escolher?</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#estatistica">Benefícios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#suporte">Suporte</a>
+                    </li>
+                  </ul>
+                  <a class="btn btn-danger" href="/demo-repository/login/index.html" role="button">Login</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- Fim da Barra de Navegação para telas pequenas -->
+          <!-- Início da Barra de Navegação para telas grandes -->
+          <div class="container-fluid menu-normal d-flex align-items-center shadow-sm sticky-top bg-white pt-3 pb-3">
+          <div class="container">
+            <div class="row ">
+              <!-- Logomarca Cardápio Fácil -->
+              <div class="col-lg-3 col-12 text-lg-start text-center">
+                <a href="index.html">
+                  <img class="img-fluid"
+                    src="assets/img/Logo-Horizontal-Cardapio-Facil.png"
+                    alt="Logo Cardápio Fácil Horizontal" width="200rem"
+                  />
+                </a>
+              </div>
+              <!-- Barra de Navegação -->
+              <div class="col-9 d-flex justify-content-end align-items-center">
+                <div>
+                  <nav class="navbar navbar-expand-lg nav-underline ">
+                    <a href="#" class="nav-link active text-light-emphasis">Início</a>
+                    <a href="#funciona" class="nav-link text-light-emphasis">Como funciona?</a>
+                    <a href="#clientes" class="nav-link text-light-emphasis">Clientes</a>
+                    <a href="#beneficios" class="nav-link text-light-emphasis">Por que escolher?</a>
+                    <a href="#estatistica" class="nav-link text-light-emphasis">Benefícios</a>
+                    <a href="#depoimentos" class="nav-link text-light-emphasis">Depoimentos</a>
+                    <a href="#suporte" class="nav-link text-light-emphasis">Suporte</a>
+                  </nav>
+                </div>
+                 <!-- Botões de Login e Cadastro -->
+                <div class="ps-4">
+                  <a class="btn btn-danger" href="/demo-repository/login/index.html" role="button">Login</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim da Barra de Navegação para telas grandes -->
+    </header>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

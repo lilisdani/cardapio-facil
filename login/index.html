@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo-icone.png"
+      type="image/x-icon"
+    />
+    <title>Login - Cardápio Fácil</title>
+  </head>
+  <!-- TESTE -->
+  <body>
+    <!-- Início da Seção de cabeçalho -->
+
+    <!-- container cor branca faixa superior -->
+    <header class="container-fluid bg-white fixed-top">
+      <!-- conteúdo do container cor branca  -->
+      <div class="container">
+        <!-- linha dentro do container para acomodar a logo -->
+        <div class="row pt-2 pb-2 d-flex align-items-center">
+          <!-- div p/ posicionar os conteudos na linha row -->
+
+          <div class="col-6">
+            <!-- Logomarca retorna p/ página principal ao clicar -->
+            <a href="/index.html">
+              <img
+                src="../assets/img/Logo-Horizontal-Cardapio-Facil.png"
+                alt="Logo Cardápio Fácil"
+                width="35%"
+              />
+              <!-- alterado tamanho da logo -->
+            </a>
+          </div>
+          <div class="col-6"></div>
+          <!-- fim da div row -->
+        </div>
+        <!-- fim do div container fixo -->
+      </div>
+    </header>
+
+    <!-- Início da Seção Principal -->
+    <main>
+      <section class="container-fluid bg-white pt-5">
+        <section class="container-fluid bg-white pt-5">
+          <section class="container-fluid bg-white pt-5">
+            <section class="container-fluid bg-white pt-3">
+              <div
+                class="container d-flex justify-content-center pt-0 pb-0"
+              ></div>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!-- INÍCIO forms SEÇÃO inputs LOGIN -->
+      <section class="container-fluid bg-white pt-0">
+        <div class="container pt-0">
+          <div class="row d-flex justify-content-center">
+            <div class="form-row pt-0 pb-0 col-4">
+              <div>
+                <p class="lh-1 fs-2">Faça seu login para</p>
+                <p class="lh-1 fs-3 fw-bold">continuar</p>
+              </div>
+              <form class="login">
+                <!-- Input CPF -->
+                <div data-mdb-input-init class="form-outline mb-2">
+                  <label class="form-label" for="formCPF">CPF:</label>
+                  <input
+                    type="text"
+                    id="formCPF"
+                    class="form-control"
+                    placeholder="Digite seu CPF"
+                  />
+                </div>
+                <!-- Input Senha -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label" for="formSenha">Senha:</label>
+                  <input
+                    type="password"
+                    id="formSenha"
+                    class="form-control"
+                    placeholder="Digite sua senha"
+                  />
+                </div>
+                <!-- Grid 2 colunas para estilização inline -->
+                <div class="row mb-4">
+                  <div class="col d-flex justify-content-center">
+                    <!-- caixa de marcação Salvar Acesso -->
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="formLembrarAcesso"
+                        checked
+                      />
+                      <label class="form-check-label" for="formLembrarAcesso">
+                        Lembrar meu acesso
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <!-- Direcionar para Recuperação de Senha -->
+                    <a href="#!">Esqueceu a Senha?</a>
+                  </div>
+                </div>
+
+                <!-- Botão de Submeter o formulário -->
+                <div class="d-grid gap-2 col-md-12 text-center pt-0">
+                  <button
+                    data-mdb-ripple-init
+                    type="submit"
+                    class="btn btn-danger btn-block"
+                  >
+                    Entrar
+                  </button>
+                </div>
+              </form>
+              <div class="d-grid gap-2 col-md-12 text-center pt-1">
+                <small
+                  >Primeiro acesso?
+                  <a href="/cadastro/index.html">Cadastre-se aqui!</a></small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FIM DA SEÇÃO INPUTS LOGIN -->
+    </main>
+    <footer></footer>
+  </body>
+</html>

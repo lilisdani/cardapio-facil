@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/cadastro.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/logo-icone.png"
+      type="image/x-icon"
+    />
+    
+    <title>Cadastre-se - Cardápio Fácil</title>
+  </head>
+
+  <body>
+    <header>
+      <!-- Início da Barra de navegação para telas pequenas -->
+         <nav class="navbar menu-sanduiche bg-body-white shadow-sm fixed-top d-lg-none">
+            <div class="container-fluid">
+                  <a class="navbar-brand" href="../index.html"
+                    ><img
+                      src="/assets/img/Logo-Horizontal-Cardapio-Facil.png"
+                      alt=""
+                      width="200rem"
+                  /></a>
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div
+                    class="offcanvas offcanvas-end"
+                    tabindex="-1"
+                    id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel"
+                  >
+                    <div class="offcanvas-header">
+                      <a
+                        href="../index.html"
+                        class="offcanvas-title"
+                        id="offcanvasNavbarLabel"
+                        ><img
+                          src="/assets/img/Logo-Horizontal-Cardapio-Facil.png"
+                          alt=""
+                          width="200rem"
+                      /></a>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul
+                        class="navbar-nav navbar-expand-lg justify-content-end flex-grow-1 pe-3"
+                      >
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#"
+                            >Início</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#funciona">Como funciona?</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#clientes">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#beneficios"
+                            >Por que escolher?</a
+                          >
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#estatistica">Benefícios</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#depoimentos">Depoimentos</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#suporte">Suporte</a>
+                        </li>
+                      </ul>
+                      <a
+                        class="btn btn-danger"
+                        href="../login/index_login.html"
+                        role="button"
+                        >Login</a
+                      >
+                    </div>
+                  </nav>
+            <!-- Fim da Barra de Navegação para telas pequenas -->
+
+            <!-- Início da Barra de Navegação para telas grandes -->
+ <div class="container-fluid menu-normal d-flex align-items-center shadow-sm sticky-top bg-white pt-4 pb-4" >
+  <div class="container">
+    <div class="row">
+       <!-- Logomarca Cardápio Fácil -->
+      <div class="col-lg-3 col-12 text-lg-start text-center">
+        <a href="/index.html">
+          <img
+            class="img-fluid"
+            src="/assets/img/Logo-Horizontal-Cardapio-Facil.png"
+            alt="Logo Cardápio Fácil Horizontal"
+            width="400rem"
+            />
+          </a>
+      </div>
+    </div>
+  </div>
+ </div>
+      <!-- Fim da Barra de Navegação para telas grandes -->
+    </header>
+
+    <!-- Início da Seção Principal -->
+    <main>
+
+        <div class="container d-flex justify-content-center pt-0 pb-0">
+
+          <div
+              class="shadow-lg p-4 mb-5 bg-white rounded form-row pt-5 pb-4 col-5"
+            >
+              <div>
+                <p class="lh-1 fs-4">Cadastre-se</p>
+                <p class="lh-1 fs-1 fw-bold text-danger">para acessar</p>
+              </div>
+
+          <form action="processar_cadastro.php" method="POST">
+            <div class="form-row pt-0 pb-3 col-12">
+                <div class="form-group col-md-12 pt-0 pb-1">
+                    <label for="inputName" class="pb-1">Nome Completo:</label>
+                    <input type="text" id="inputName" class="form-control" name="nome" placeholder="Digite seu nome" required>
+                </div>
+                <div class="form-group col-md-12 pb-1">
+                    <label for="inputEmail" class="pb-1">Email:</label>
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="form-group col-md-12 pb-1">
+                    <label for="inputCPF" class="pb-1">CPF:</label>
+                    <input type="text" class="form-control" id="inputCPF" name="cpf" placeholder="Digite seu CPF" required>
+                </div>
+                <div>
+                    <label for="inputCargo" class="pb-1">Cargo:</label>
+                    <select class="form-select" id="inputCargo" name="cargo" aria-label="Selecione seu cargo" required>
+                        <option value="">Selecione seu cargo</option>
+                        <option value="1">Atendente</option>
+                        <option value="2">Caixa</option>
+                        <option value="3">Administrador</option>
+                        <option value="4">Administrador de Sistema</option>
+                        <option value="5">Cozinha</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-12 pb-1">
+                    <label for="inputSenha" class="pb-1">Senha:</label>
+                    <input type="password" class="form-control" id="inputSenha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <div class="form-group col-md-12 pb-0">
+                    <label for="inputSenha2" class="pb-1">Repita Senha:</label>
+                    <input type="password" class="form-control" id="inputSenha2" name="senha2" placeholder="Repita sua senha" required>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-md-12 text-center pt-2">
+              <button type="submit" class="btn btn-danger">Cadastrar</button>
+            </div>  
+
+          </form>
+           <!-- Texto Direcionamento Login -->
+            <div class="row pt-2">
+              <div class="col-12">
+                <small>Você já tem uma conta? <a href="../login/index_login.html" class="text-dark fw-bold">Acesse aqui!</a></small>
+              </div>
+            </div>
+            
+        </div>
+
+    </main>
+    <!-- Imagem Rodapé -->
+    <footer>
+      <section class="container-fluid bg-secao-footer text-white pt-5 pb-5">
+        <div class="container d-flex align-items-center pt-5 pb-5 ">
+          <div class="row pt-5 pb-5">
+        <div class="col-12 pt-5 pb-5">
+        </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- ADICIONANDO JAVASCRIPT DO BOOTSTRAP -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script> 
+  </body>
+</html>

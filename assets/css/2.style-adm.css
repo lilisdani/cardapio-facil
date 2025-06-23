@@ -1,0 +1,224 @@
+html, body, main {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1. Estilizações da Página Index.html do Painel do Administrador */
+
+/* Estilizações do Header */
+header {
+  padding: 10px 2%;
+  background-color: white;
+}
+.logo {
+  width: 14rem;
+}
+.card-painel-usuario {
+  width: 100%;
+}
+.painel-usuario {
+  /* padding-right: 28px; */
+  width: 100%;
+  border: 1px solid white;
+}
+.painel-usuario:hover {
+  /* opacity: 0.7; */
+  border: 1px solid #dadada;
+  cursor: pointer;
+}
+
+.titulo-area-acesso p {
+  font-size: 10px;
+}
+.foto-usuario img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #1d1e20;
+  border: 1px solid #dadada;
+}
+.ola-usuario p {
+  font-size: 10px;
+  margin: 0;
+  width: 100%;
+}
+
+.menu-painel-usuario {
+  padding: 10px 20px;
+}
+.menu-painel-usuario-titulo {
+  font-size: 12px;
+  color: #544F4F;
+}
+.menu-painel-usuario-item {
+  font-size: 13px;
+  color: #544F4F;
+  padding: 0px;
+  margin-left: 10px;
+}
+.menu-painel-usuario-sair {
+  font-size: 12px;
+  color: #544F4F;
+  padding: 0px;
+  margin-left: 10px;
+}
+
+/* Estilizações da Seção da Barra Lateral */
+
+main row {
+  height: 100%;
+}
+.barra-lateral {
+  width: 15%;
+  height: 100%;
+  background-color: white;
+}
+.barra-lateral h6 {
+  color: #544F4F;
+  font-size: 13px;
+  margin: 10px;
+}
+.barra-lateral a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 13px;
+  color: #7a6b6b;
+  font-size: 13px;
+}
+.barra-lateral-active {
+  background-color: rgb(245,245,245);
+  font-weight: bold;
+  border-left: 6px solid #DD3627;
+}
+.barra-lateral-link:hover {
+  opacity: 0.7;
+} 
+
+/* Estilizações da Seção de Conteúdo Princial */
+.main-principal {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  border-top-left-radius: 20px;
+}
+.main-conteudo {
+  width: 83.9%;
+  background-color: rgb(245,245,245);
+  padding: 15px;
+  border-top-left-radius: 20pxpx;
+}
+
+.main-conteudo-dashboard {
+  background-color: rgb(245,245,245);
+  padding: 10px 10px 0 10px;
+  border-top-left-radius: 15px;
+}
+.titulo-secao {
+  background-color: white;
+  padding: 10px;
+}
+.titulo-secao h2 {
+  font-size: 19px;
+}
+.titulo-secao p {
+  font-size: 12px;
+  padding: 0;
+}
+.titulo-secao i {
+  color: #DD3627;
+}
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 5px;
+}
+.main-banner {
+  width: 100%;
+  height: 300px;
+  padding-left: 300px;
+  position: relative;
+  background: url(../img/bg-adm-inicio.svg) no-repeat;
+}
+.main-banner p {
+  font-size: 12px;
+  color: white;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+}
+.main-banner h1 {
+  padding-top: 50px;
+}
+
+.main-card .card {
+  width: 18rem;
+  border-left: 3px solid #DD3627;
+}
+
+.relatorio {
+  padding: 10px;
+}
+.relatorio-conteudo {
+  background-color: white;
+  border-left: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  padding: 10px 20px;
+}
+.relatorio-titulo {
+  display: flex;
+  gap: 10px;
+}
+
+footer {
+  background-color: #DD3627;
+  padding: 10px;
+}
+/* Fim das Estilizações da Página index.html do Painel do Administrador */
+/* 2. Estilizações da Página do Painel do Administrador */
+/* Dispositivos móveis */
+@media (max-width: 999px) {
+  header logo{
+    width: 90rem;
+  }
+  .main-conteudo {
+    width: 90%;
+    background-color: rgb(245,245,245);
+    padding: 0px;
+    border-radius: 0;
+  }
+  .main-principal {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(245,245,245);
+    border-radius: 0;
+  }
+  .card-title {
+    font-size: 0.7rem;
+  }
+  .card h5 {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  .barra-lateral-link {
+    padding: 10px;
+    color: #544F4F;
+    text-decoration: none;
+  }
+  .painel-usuario:hover {
+    /* opacity: 0.7; */
+    border: 0 none;
+    cursor:default;
+  }
+}

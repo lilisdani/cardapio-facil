@@ -1,0 +1,17 @@
+/* Folha de estilo para a Página de Login */
+/* 1º: Zerando os padrões do HTML */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2º: Estilizando o Cabeçalho*/
+header {
+  background: #ffffff;
+  padding: 20px 20px 20px 40px;
+}
+
+header img {
+  max-width: 301px;
+}

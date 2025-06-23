@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+   .botãoenviar {
+
+width: auto;
+background-color: rgb(37, 168, 20);
+color: #f5f5f5;
+border-radius: 2cap;
+position:relative;
+ bottom: 10px; /* Ajuste conforme necessário */
+ left: 79%; /* Ajuste conforme necessário */
+ margin-top: 2%;
+}
+#itens-carrinho {
+    position: relative;
+    bottom: 10px; /* Ajuste conforme necessário */
+    left: 80%; /* Ajuste conforme necessário */
+    display:flex;
+    align-items: center;
+}
+
+#itens-carrinho img {
+    width: 6%; /* Tamanho da imagem do carrinho */
+    height: auto; /* Mantém a proporção da imagem */
+    
+}
+
+#quantidade-itens-carrinho {
+    background-color: red; /* Cor de fundo do número */
+    color: white; /* Cor do texto */
+    border-radius: 60%; /* Formato redondo */
+    width: 3%; /* Largura */
+    height: 3%; /* Altura */
+    font-size: 15px; /* Tamanho da fonte */
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    margin-right: 15%;
+} 
+
+
+
+ </style>
+
+
+</head>
+<body>
+
+
+    <!-- início SANDUÍCHE x-caboquinho -->
+<div class="col mb-5">
+    <div class="card h-100">
+        <!-- Imagem do produto-->
+        <img class="card-img-top" src="../assets/img/xcaboquinho.png" alt="...">
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Nome do produto-->
+                <h5 class="fw-bolder">X-Caboquinho</h5>
+                <!-- Preço do Produto-->
+                Pão, tucumã, queijo coalho e banana frita:
+            </div>
+        </div>
+        <!-- Selecionar quantidade-->
+        <label class="form-label" for="typeNumber">Qtde:</label>
+        <div class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent">
+            <div class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center">
+                <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', -1); atualizarCarrinho()">
+                    <i class="fas fa-minus"></i>
+                </button>
+
+                <input id="form1" min="0" name="quantity" value="0" type="number" class="form-control form-control-sm" onchange="atualizarCarrinho()"/>
+
+                <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', 1); atualizarCarrinho()">
+                    <i class="fas fa-plus"></i>
+                </button>
+
+                <h1 class="text-white">Mesa 01</h1>
+
+                <div class="text-center">
+                  <button class="btn bg-success text-white">Ver Comanda</button>
+                  <button class="btn bg-dark text-white">Desfazer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="bebidas" class="container-fluid pt-3 pb-3 bg-danger">
+    <div class="row">
+      <div col-12><h4 class="text-white">Bebida</h4></div>
+    </div>
+  </div>
+</section>
+<script src="../assets/js/cardapio.js"></script>
+
+
+
+
+
+
+
+
+    <div id="itens-carrinho">
+                
+        <img src="../assets/img/carrinho1.png" alt="Carrinho de Compras" >
+        <span id="quantidade-itens-carrinho">0</span> <!-- Aqui será exibida a quantidade de itens -->
+         <!-- Botão para enviar o pedido -->
+    
+        
+    </div>
+
+    <!-- Botão para enviar o pedido -->
+    <button onclick="enviarPedido()" class="botãoenviar">Enviar Pedido</button>
+    
+
+    </div>
+
+     <!-- início SANDUÍCHE misto -->
+     <div class="col mb-5">
+        <div class="card h-100">
+         <!-- Selo Promocional-->
+          <div
+            class="badge bg-danger text-white position-absolute"
+            style="top: 0.5rem; right: 0.5rem"
+          >
+            Promoção%
+          </div>
+           <!-- Imagem do produto-->
+           <img class="card-img-top" src="../assets/img/misto-quente.png" alt="sanduiche misto-quente">
+
+          <!-- Detalhes do produto-->
+          <div class="card-body p-4">
+            <div class="text-center">
+              <!-- Nome do produto-->
+              <h5 class="fw-bolder">Misto</h5>
+              Pão de forma, queijo mussarela & presunto fatiados:
+
+              <div class="d-flex justify-content-center pt-4">
+                <span class="text-muted text-decoration-line-through">
+                  R$7.00</span
+                >
+                R$5.00
+              </div>
+                  <!-- Preço do produto-->
+            </div>
+          </div>
+
+                 <!-- Selecionar quantidade-->
+          <label class="form-label" for="typeNumber">Qtde:</label>
+          <div
+            class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent"
+          >
+            <div
+              class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center"
+            >
+              <button
+                class="btn btn-link px-2"
+                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+              >
+                <i class="fas fa-minus"> <  </i>
+              </button>
+
+              <input
+                id="form1"
+                min="0"
+                name="quantity"
+                value="0"
+                type="number"
+                class="form-control form-control-sm"
+              />
+
+              <button
+                class="btn btn-link px-2"
+                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+              >
+                <i class="fas fa-plus"> > </i>
+              </button>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="col mb-5">
+            <div class="card h-100">
+          <!-- Imagem do produto-->
+          <img class="card-img-top" src="../assets/img/xcaboquinho.png" alt="...">
+          <div class="card-body p-4">
+           <div class="text-center">
+               <!-- Nome do produto-->
+               <h5 class="fw-bolder">X-Caboquinho</h5>
+               <!-- Preço do Produto-->
+               Pão, tucumã, queijo coalho e banana frita:
+           </div>
+       </div>
+       <!-- Selecionar quantidade-->
+       <label class="form-label" for="typeNumber">Qtde:</label>
+       <div class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent">
+           <div class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center">
+               <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', -1); atualizarCarrinho()">
+                   <i class="fas fa-minus"></i>
+               </button>
+ 
+               <input id="form1" min="0" name="quantity" value="0" type="number" class="form-control form-control-sm" onchange="atualizarCarrinho()"/>
+ 
+               <button class="btn btn-link px-2" onclick="alterarQuantidade(this, 'form1', 1); atualizarCarrinho()">
+                   <i class="fas fa-plus"></i>
+               </button>
+               <!-- Selecionar quantidade-->
+                 
+       
+ 
+ 
+              <label class="form-label" for="typeNumber">S</label>
+               <div class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent">
+     <div class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center">
+       <button class="btn btn-link px-2"
+         onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+         <i class="fas fa-minus"> < </i>
+       </button>
+   
+       <input
+         id="form1"
+         min="0"
+         name="quantity"
+         value="0"
+         type="number"
+         class="form-control form-control-sm"
+       />
+   
+       <button
+         class="btn btn-link px-2"
+         onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+       >
+         <i class="fas fa-plus"> > </i>
+       </button>
+                 </div>
+                   </div>
+                 </div>
+                      </div>
+   
+           
+ 
+                   <div class="d-flex justify-content-center pb-2">
+                     <label class="form-label" for="typeNumber">R$10,00</label>
+                   </div>
+                      <!-- Selecionar quantidade-->
+                   <label class="form-label" for="typeNumber">Qtde:</label>
+                   <div
+                     class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent"
+                   >
+                     <div
+                       class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center"
+                     >
+                       <button
+                         class="btn btn-link px-2"
+                         onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                       >
+                         <i class="fas fa-minus"><</i> 
+                       </button>
+ 
+                       <input
+                         id="form1"
+                         min="0"
+                         name="quantity"
+                         value="0"
+                         type="number"
+                         class="form-control form-control-sm"
+                       />
+ 
+                       <button
+                         class="btn btn-link px-2"
+                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                       >
+                         <i class="fas fa-plus"> > </i>
+                       </button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+   
+           
+ 
+                   <div class="d-flex justify-content-center pb-2">
+                     <label class="form-label" for="typeNumber">R$10,00</label>
+                   </div>
+                      <!-- Selecionar quantidade-->
+                   <label class="form-label" for="typeNumber">Qtde:</label>
+                   <div
+                     class="d-flex justify-content-center p-4 pt-0 border-top-0 bg-transparent"
+                   >
+                     <div
+                       class="col-md-12 col-lg-3 col-xl-6 d-flex justify-content-center"
+                     >
+                       <button
+                         class="btn btn-link px-2"
+                         onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                       >
+                         <i class="fas fa-minus"><</i> 
+                       </button>
+ 
+                       <input
+                         id="form1"
+                         min="0"
+                         name="quantity"
+                         value="0"
+                         type="number"
+                         class="form-control form-control-sm"
+                       />
+ 
+                       <button
+                         class="btn btn-link px-2"
+                         onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                       >
+                         <i class="fas fa-plus"> > </i>
+                       </button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+        </div>
+      </div>
+
+    
+</body>
+</html>

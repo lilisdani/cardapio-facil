@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teste de Conexão com o Banco de Dados</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div id="resultado"></div>
+
+<script>
+// Faz uma solicitação AJAX para o arquivo PHP
+$.ajax({
+    url: "testar_conexao.php",
+    type: "GET",
+    dataType: "json",
+    success: function(data) {
+        // Manipula os dados retornados
+        if (data.length > 0) {
+            // Se houver resultados, exibe-os na página
+            $("#resultado").html("<pre>" + JSON.stringify(data, null, 2) + "</pre>");
+        } else {
+            // Se não houver resultados, exibe uma mensagem de erro
+            $("#resultado").text("Nenhum resultado encontrado.");
+        }
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+        // Manipula erros de solicitação AJAX
+        $("#resultado").text("Erro na solicitação AJAX: " + textStatus + ", " + errorThrown);
+    }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* Paleta de Cores ---------------------------------------------------------- */
+
+/* 1 - Cor do texto */
+
+.color-text-branco {
+  color: white;
+}
+.color-text-vermelho {
+  color: #DD3627;
+}
+.color-text-cinza {
+  color: #544F4F;
+}
+.color-text-amarelo {
+  color: #ffcc00;
+}
+.color-text-laranja {
+  color: #f68704;
+}
+.color-text-verde {
+  color: #627526;
+}
+
+/* 2 - Cor de background */
+
+.background-vermelho {
+  background-color: #DD3627;
+}
+.background-cinza {
+  background-color: #1d1e20;
+}
+.background-amarelo {
+  background-color: #ffcc00;
+}
+.background-laranja {
+  background-color: #f68704;
+}
+.background-verde {
+  background-color: #627526;
+}
+
+/* Fim da Paleta de Cores --------------------------------------------------------- */
+
+
+/* Estilização da Logo no Cabeçalho */
+
+
+/* Estilização da Seção Início */
+
+.bg-secao-inicio {
+  background: url(../img/barra-inicio-vermelha.svg) no-repeat;
+  background-size: cover;
+  background-position: 15% 98%;
+}
+
+.p-absolute-inicio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: auto;
+}
+.p-absolute-inicio-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}
+
+
+.img-inicio {
+}
+
+/* Estilização da Seção Como Funciona */
+
+.bg-funciona {
+  background: #dd3627;
+  position: relative;
+}
+.bg-funciona-texto {
+  background: url(assets/img/bg-funciona-texto.svg) no-repeat;
+  background-size: cover;
+  background-position: 0% 0%;
+}
+.foto-celular {
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /* width: 35vh; */
+}
+
+
+
+/* Estilização da Seção Clientes */
+
+/* Estilização da Seção Benefícios */
+
+#beneficios {
+}
+.beneficios {
+  position: relative;
+}
+.beneficios h3 {
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #f68704;
+  border-radius: 8px;
+  padding: 24px 42px 24px 24px;
+  cursor: pointer;
+}
+.beneficios img {
+  position: absolute;
+  top: 32px;
+  right: 24px;
+  cursor: pointer;
+  width: 22px;
+}
+.beneficios p {
+  border-right: thin solid #f68704;
+  border-bottom: thin solid #f68704;
+  border-left: thin solid #f68704;
+  margin-top: -8px;
+  padding: 24px;
+  border-radius: 0 0 8px 8px;
+  /* Estilização das respostas com interação com JavaScript */
+  /* Fechando os cards de resposta */
+  padding: 0 24px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+/* Ativando as respostas */
+.beneficios.ativa p {
+  height: fit-content;
+  opacity: 1;
+  padding: 24px;
+  margin-top: -12px;
+}
+
+/* Estilização da Seção Estatística */
+
+.bg-estatistica {
+  background: #ffcc00;
+}
+.bg-card-estatistica {
+  background: #63752625;
+}
+.p-relative {
+  /* Aplica na Seção Pai */
+  position: relative;
+}
+.p-absolute {
+  /* Aplica nos elementos filhos */
+  position: absolute;
+}
+.p-absolute-img {
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10; */
+}
+
+/* Estilização da Seção Depoimentos */
+
+.p-depoimento {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+/* Estilização da Seção Suporte*/
+
+.link-suporte {
+  color: #1d1e20;
+  font-weight: 600;
+  text-decoration: none;
+}
+.link-suporte:hover {
+  text-decoration: underline;
+}
+
+/* Esilização do Rodapé */
+
+.bg-rodapé-cinza {
+  background: #404040;
+}
+.direitos {
+}
+.direitos p {
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 0;
+}
+
+.suporte nav a {
+  display: block;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.suporte nav a:hover {
+  text-decoration: underline;
+}
+.suporte p {
+  color: #f1f1f1;
+}
+.suporte p a {
+  color: #f1f1f1;
+  text-decoration: none;
+}
+.suporte p a:hover {
+  text-decoration: underline;
+}
+
+/* Estilizações responsivas condicionadas ao tamanho da tela */
+/* Dispositivos móveis */
+@media (max-width: 999px) {
+  body {
+    /* overflow-x: hidden; */
+  }
+  .img-inicio {
+    width: 60vw;
+    padding-top: 20px;
+  }
+  .p-inicio {
+    text-align: center;
+  }
+  .menu-normal {
+    visibility: hidden;
+  }
+  .menu-sanduiche {
+      visibility: visible;
+  }
+  .img-beneficios {
+    /* visibility: hidden; */
+  }
+  .p-absolute-paragrafo {
+    position: absolute;
+    bottom: 0;
+  }
+  .foto-celular {
+    height: 40vh;
+    bottom: 0;
+  }
+  text-suporte h3{
+    text-align: center;
+  }
+  .lista-canais li {
+    list-style:none;
+  }
+}
+
+/* Telas maiores */
+@media (min-width: 999px) {
+  /* Imagem da Seção Funciona */
+  .foto-celular {
+    width: 85vh;
+  }
+  .menu-sanduiche {
+    visibility: hidden;
+  }
+  .menu-normal {
+      visibility: visible;
+  }
+  .p-absolute-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  z-index: 10;
+  }
+  text-suporte h3{
+    text-align: justify;
+  }
+}
+
+/* Esconde tudo que passar do limite da tela */
+/* @media (max-widith: 999px){
+  body {
+    overflow-x: hidden; 
+  }
+} */
